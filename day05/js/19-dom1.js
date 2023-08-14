@@ -17,3 +17,19 @@ console.log(menuItem3);
 
 const menuElAll = document.querySelectorAll(`.menu`);
 console.log(menuElAll);
+
+console.log(h1El.innerText);
+console.log(h1El.innerHTML);
+
+h1El.innerText = `<span>hello</span>`;
+h1El.innerHTML = `<span style="color:red">hello</span>`;
+
+menuItem3.innerText = "Yeni icerik";
+
+const menuItem3Text = menuItem3.innerText;
+
+document.querySelector("ul.menu li:last-child").innerText += ` ${menuItem3Text}`;
+
+document.querySelector("ul.menu li:nth-child(4)").innerText = "<b>Hello World</b>";
+
+document.querySelector("ul.menu li:nth-child(4)").innerHTML = "<b>Hello World</b>";
