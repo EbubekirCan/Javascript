@@ -23,3 +23,4 @@ function topla() {
     inputEl1.value = "";
     inputEl2.value = "";
 };
+
