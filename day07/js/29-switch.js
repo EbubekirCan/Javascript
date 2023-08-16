@@ -4,31 +4,68 @@ const priceEl = document.querySelector("#price");
 const resultEl = document.getElementById("result");
 
 function setPrice() {
-    let result = priceEl.value;
+    let result = +priceEl.value;
     let discount;
 
-    switch (true) {
-        case result >= 1500:
+    // switch (true) {
+    //     case result >= 1500:
+    //         discount = 15;
+    //         break;
+    //     case result >= 1000:
+    //         discount = 13;
+    //         break;
+    //     case result >= 700:
+    //         discount = 10;
+    //         break;
+    //     case result >= 500:
+    //         discount = 7;
+    //         break;
+    //     case result >= 300:
+    //         discount = 5;
+    //         break;
+    //     default:
+    //         discount = 2;
+    // }
+
+    switch (result) {
+        case 1500:
             discount = 15;
             break;
-        case result >= 1000:
+        case 1000:
             discount = 13;
             break;
-        case result >= 700:
+        case 700:
             discount = 10;
             break;
-        case result >= 500:
+        case 500:
             discount = 7;
             break;
-        case result >= 300:
+        case 300:
             discount = 5;
             break;
         default:
             discount = 2;
     }
 
+    // if (result === 1500) {
+    //     discount = 15;
+    // } else if (result === 1000) {
+    //     discount = 13;
+    // } else if (result === 700) {
+    //     discount = 10;
+    // } else if (result === 500) {
+    //     discount = 7;
+    // } else if (result === 300) {
+    //     discount = 5;
+    // } else {
+    //     discount = 2;
+    // }
+
+
     result -= result * discount / 100;
     // result = result - result * discount / 100;
 
-    resultEl.innerText = `SONUCT: ${result}₺`;
+    resultEl.innerText = `SONUCT: ${result.toFixed()}₺`;
+    // clear input
+    priceEl.value = "";
 }
