@@ -21,8 +21,26 @@ if (a > b && a > 3 && a < 10) {
     console.log("Butun senaryonlar tuttu")
 }
 
+a > b && a > 3 && a < 10 && console.log("Butun senaryonlar tuttu");
+
 const kullaniciSayisi = 0
 
 const sayi = kullaniciSayisi || "Kullanici sayisi bulunamadi"
 
 console.log(sayi);
+
+
+// SENARYO 1
+const isLoggedIn = true;
+const userName = "";
+
+
+(isLoggedIn || userName) && console.log("Kullanici giris yapti");
+
+// SENARYO 2
+const username = "admin";
+const password = "1234";
+
+const returnIfadesi = username === "2" && password === "1234" && "Giris basarili";
+
+console.log(returnIfadesi);
