@@ -31,3 +31,15 @@ function topla(a, b) {
 };
 
 topla(5, 10);
+
+function toplaDefaultDegerli(x = 0, y = 0) {
+    // if (x && y) {
+    //     console.log(x + y);
+    // }
+    console.log(x + y);
+    // x = 5, y = undefined => NaN
+};
+
+toplaDefaultDegerli(5, 15);
+toplaDefaultDegerli(5);
+toplaDefaultDegerli();
