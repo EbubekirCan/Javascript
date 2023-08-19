@@ -34,3 +34,4 @@ function asalSayiMi(sayi) {
 
     return true;
 };
+

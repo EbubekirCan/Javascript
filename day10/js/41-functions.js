@@ -55,3 +55,4 @@ if (myAge < 30) {
 } else {
     console.log("Buyuk");
 }
+
