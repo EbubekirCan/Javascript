@@ -43,3 +43,15 @@ function toplaDefaultDegerli(x = 0, y = 0) {
 toplaDefaultDegerli(5, 15);
 toplaDefaultDegerli(5);
 toplaDefaultDegerli();
+
+function yasHesapla(dogumYili) {
+    return 2023 - dogumYili;
+}
+
+const myAge = yasHesapla(1995);
+
+if (myAge < 30) {
+    console.log("Kucuk");
+} else {
+    console.log("Buyuk");
+}
