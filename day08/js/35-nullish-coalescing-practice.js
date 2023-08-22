@@ -1,13 +1,13 @@
 // DOM Elementleri
 
-// const yukseklikEl = document.querySelector("#yukseklik");
+  const yukseklikEl = document.querySelector("#yukseklik");
 // const genislikEl = document.querySelector("#genislik");
 const resultEl = document.querySelector("#result");
 
 function alanHesapla() {
-    const yukseklik = undefined;
+  txtNum.disabled=false;
     const genislik = 1000;
-
+    result.disabled
     // nullish coalescing
     const result = (yukseklik ?? 100) * (genislik ?? 100);
 
