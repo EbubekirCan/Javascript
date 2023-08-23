@@ -1,4 +1,4 @@
- // DOM ELEMENTS
+// DOM ELEMENTS
 const grade1El = document.querySelector("#txtScore1");
 const grade2El = document.querySelector("#txtScore2");
 const grade3El = document.querySelector("#txtScore3");
@@ -16,9 +16,7 @@ btnAverage.addEventListener("click", () => {
     }
 
     const average = (grade1 + grade2 + grade3) / 3;
-    console.log(average);
     const letter = convertGradeToLetter(average);
-    console.log(letter);
     txtResult.innerText = `Ortalamanız: ${Math.round(average)} ve harf notunuz: ${letter}`;
 });
 
