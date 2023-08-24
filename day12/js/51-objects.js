@@ -31,6 +31,7 @@ foo();
 employee.increaseSalary(1000);
 console.log(employee.salary);
 
-btn.addEventListener('click', function () {
+btn.addEventListener('click', function (e) {
     console.log(this);
+    console.log(e.target);
 });
