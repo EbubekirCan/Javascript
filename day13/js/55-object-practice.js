@@ -17,11 +17,14 @@ const car = {
     price: 20000,
 };
 
+
+
 carList.addEventListener("change", (e) => {
     const carKey = e.target.value;
     carValue.innerHTML = car[carKey];
     // objelerde anahtar ismiyle değerlere ulaşmak için köşeli parantez kullanılır
 });
+
 
 const fillCarList = () => {
     const carKeys = Object.keys(car);
