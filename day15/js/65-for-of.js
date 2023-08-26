@@ -44,3 +44,5 @@ for (let araba of arabalar) {
 console.log(str);
 console.log(arabalar.join(", "))
 
+
+
