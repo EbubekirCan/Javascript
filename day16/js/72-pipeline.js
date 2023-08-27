@@ -9,7 +9,21 @@ const products = [
     { id: 8, name: "headset", price: 150 },
     { id: 9, name: "earphone", price: 150 },
     { id: 10, name: "speaker", price: 150 },
-  ];
+];
 
+// const filteredProducts = products.filter((product) => product.price >= 500);
 
-  
+// const increasedPrice = filteredProducts.map((product) => {
+//     product.price *= 1.15;
+//     return product;
+// });
+
+// increasedPrice.forEach((product) => console.log(product));
+
+products
+    .filter((product) => product.price >= 500)
+    .map((product) => {
+        product.price *= 1.15;
+        return product;
+    })
+    .forEach((product) => console.log(product));
