@@ -15,10 +15,10 @@ const setColorForLowGrades = () => {
 
     // her dongude satirin son sutunundaki notu al
     tableRows.forEach((row) => {
-        const grade = row.querySelector("td:last-child").innerText;
+        const grade = row.querySelector("td:nth-child(3)").innerText;
         //  not 40'dan kucukse satirin arka plan rengini kirmizi yap
         if (grade < 40) {
-            row.classList.add("table-danger");
+            row.classList.toggle("table-danger");
         }
     });
 };
