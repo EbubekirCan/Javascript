@@ -18,6 +18,7 @@ identityEl.addEventListener("input", (e) => {
 
 btnTogglePasswordEl.addEventListener("click", (e) => {
 
+    // type'in password olup olmadığını kontrol et
     if (passwordEl.type === "password") {
         passwordEl.type = "number";
         btnTogglePasswordEl.innerHTML = `<i class="fa-solid fa-eye-slash"></i>`;

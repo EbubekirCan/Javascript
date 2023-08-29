@@ -28,7 +28,7 @@ const setColorForLowGrades = () => {
     let html = "";
 
     students.forEach((student) => {
-        html += `<tr>
+        html += `<tr class="data-row">
                 <td>${student.id}</td>
                 <td>${student.name}</td>
                 <td>${student.grade}</td>
@@ -54,6 +54,15 @@ document.getElementById("studentsTable").addEventListener("click", (e) => {
         // kullanici onay verdiyse
         if (result) {
             // silme islemini gerceklestir
+            e.target.closest("tr").remove();
+            // tablodaki satirlari kaldirilan satir cikarilmis halde tekrar sec
+            const tableRows = document.querySelectorAll("#studentsTable .data-row");
+            // tablodaki satirlarin index'lerini guncelle
+            tableRows.forEach((tr, index) => {
+                tr.children[0].innerText = index + 1;
+            })
         }
+    } else if (e.target.closest("tr").classList.contains("data-row")) {
+        e.target.closest("tr").classList.toggle("table-info")
     }
 })
