@@ -35,13 +35,17 @@ const setSearchBox = (arr) => {
 
     // listeyi goster
     listEl.style.display = "block";
-
 };
-
-
 
 
 // SEARCH EVENT LISTENER
 searchEl.addEventListener("input", (e) => {
-    setSearchBox(filterData(e.target.value));
+    // cleartimeout metoduyla calisan bir timeout varsa onu iptal et
+    if (timeoutId) clearTimeout(timeoutId);
+
+    console.log(e.target.value)
+    // 1 saniye sonra calisacak bir timeout olustur ki kullanici yazmayi birakana kadar bekle ve sonrasinda filtreleme islemi yap
+    const timeoutId = setTimeout(() => {
+        setSearchBox(filterData(e.target.value));
+    }, 5000);
 });
